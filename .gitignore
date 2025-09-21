@@ -1,0 +1,40 @@
+# =================================
+# Backend: ASP.NET / .NET
+# =================================
+# Binarios y compilación
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.log
+
+# Archivos de Visual Studio
+*.user
+*.suo
+*.vs/
+.vscode/
+
+# Configuración local
+appsettings.Development.json
+*.db
+
+# =================================
+# Frontend: Node / React (futuro)
+# =================================
+node_modules/
+build/
+dist/
+
+# Archivos de lock de Node (opcional si no quieres subirlos)
+# package-lock.json
+# yarn.lock
+
+# =================================
+# Archivos temporales / OS
+# =================================
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+*.bak
