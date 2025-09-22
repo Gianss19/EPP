@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/frontend/src/styles/styles.css">
+    <link rel="icon" type="image/png" href="frontend/src/assets/favicon.png">
+    <title>Solicitud de EPP</title>
+</head>
+
+<body>
+
+
+<header class="header">
+        <h1>Solicitud de EPP</h1>
+    <nav>
+        <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#solicitudes">Solicitudes</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#ayuda">Ayuda</a></li>
+
+        </ul>
+    </nav>
+</header>
+<main>
+    <form action="" method="post" class="login-form" autocomplete="on">
+
+        <h2>Iniciar Sesión</h2>
+        
+        <label for="username">Usuario:</label>
+        <input type="email" id="username" name="username" required>
+        
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label class="login-label-checkbox" for="login-checkbox">
+                    
+        <input type="checkbox" name="checkbox" id="login-checkbox"> Mantener iniciada la sesión</label>
+
+
+        <button type="submit">Ingresar</button>
+        <p>¿No tienes una cuenta? <a class="login-append" href="#registro">Regístrate aquí</a></p>
+         
+        <a class="login-ms" href="URL_DE_MICROSOFT">
+            <img src="/frontend/src/assets/ms-icon.png" alt="logo Microsoft">
+            Iniciar sesión con Microsoft
+        </a>
+
+    </form>
+
+</main>
+<footer class="login-footer">
+    <img src="/frontend/src/assets/logo.png" alt="logo de agua de Puebla">
+    &copy; 2025 Agua de Puebla para todos.
+</footer>
+</body>
+</html>
