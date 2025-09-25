@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nueva Solicitud EPP</title>
+    <link rel="stylesheet" href="/frontend/src/styles/sol.css">
+</head>
+<body>
+
+<header class="header">
+    <img src="/frontend/src/assets/logo.png" alt="Agua de Puebla">
+    <nav>
+        <ul class="nav-links">
+            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="historial.html">Historial</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h2>Nueva Solicitud de EPP</h2>
+
+    <!-- Datos del solicitante -->
+    <section class="solicitante-info">
+        <label>Nombre del solicitante:
+            <input type="text" id="solicitante" required>
+        </label>
+        <label>Área/Centro de costos:
+            <input type="text" id="area" required>
+        </label>
+        <label>Fecha de solicitud:
+            <input type="date" id="fecha" required>
+        </label>
+    </section>
+
+    <!-- Número de empleados -->
+    <section class="num-empleados">
+        <label>Número de empleados a solicitar:
+            <input type="number" id="num-empleados" min="1" value="1">
+        </label>
+        <button type="button" id="crear-empleados">Crear campos</button>
+    </section>
+
+    <!-- Contenedor para empleados -->
+    <form id="empleados-container">
+        <!-- Empleados dinámicos aparecerán aquí -->
+    </form>
+
+    <button type="submit" id="enviar-solicitud">Enviar Solicitud</button>
+</main>
+
+<footer class="footer">
+
+    &copy; 2025 Agua de Puebla para todos.
+</body>
+</html>

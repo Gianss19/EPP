@@ -1,0 +1,147 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: url(/frontend/src/assets/bg.png);
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #004aad;
+    font-weight: bold;
+}
+
+.header {
+    background: linear-gradient(90deg, #004aad 0%, #1d1818 100%);
+    opacity: 0.9;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    position: relative;
+    top: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+
+.header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.header nav ul li a {
+    color: white;
+    font-weight: bold;
+}
+
+.header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 900px;
+    margin: 50px auto 100px auto;
+    padding: 0 20px;
+}
+
+h1, h2 {
+    color: #004aad;
+    text-align: center;
+}
+
+section {
+    background: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+section label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+section input[type="text"],
+section input[type="number"],
+section input[type="date"],
+section textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+section textarea {
+    resize: vertical;
+}
+
+.galeria-epp .grid-epp {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    padding: 0;
+    list-style: none;
+}
+
+.galeria-epp .grid-epp li {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.galeria-epp .grid-epp img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.galeria-epp .grid-epp input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn-enviar {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-weight: bold;
+    background-color: #004aad;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-enviar:hover {
+    background-color: #07214d;
+    transition: all 0.3s ease;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-top: 1px solid #ccc;
+    font-size: 15px;
+    color: #333;
+    font-weight: bold;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

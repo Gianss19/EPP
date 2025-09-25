@@ -1,0 +1,93 @@
+body {
+    font-family: system-ui, sans-serif;
+    background-color: #f2f4f7;
+    margin: 0;
+    padding: 0;
+}
+strong {
+    color: #df3b12;
+}
+
+header.header {
+    background: linear-gradient(90deg, #004aad 0%, #1d1818 100%);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header.header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+header.header nav ul li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+header.header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.dashboard-container {
+    padding: 20px;
+}
+
+.panels {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+article.card {
+    flex: 1;
+    min-width: 150px;
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+article.card:hover {
+    box-shadow: 10px 10px 16px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+
+}
+
+article.card.pending { border-top: 4px solid #f0ad4e; }
+article.card.approved { border-top: 4px solid #28a745; }
+article.card.rejected { border-top: 4px solid #dc3545; }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #004aad;
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #1322ac;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}

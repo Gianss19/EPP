@@ -3,6 +3,9 @@ body{
    background-image: url(/frontend/src/assets/bg.png);
 }
 
+strong{
+   color: #df3b12;
+}
 
 .header{
    background: linear-gradient(90deg, #004aad 0%, #1d1818 100%);
@@ -62,7 +65,7 @@ body{
    font-weight: bold;
 }
 .login-form input[type="email"],
-.login-form input[type="password"]{
+.login-form input[type="password"], .login-form input[type="text"]{
    width: 100%;
    padding: 8px;
    margin-bottom: 15px;
@@ -70,8 +73,10 @@ body{
    border-radius: 8px;
    box-sizing: border-box;
 }
+
 .login-form input[type=email]:focus,
-.login-form input[type=password]:focus{
+.login-form input[type=password]:focus,
+.login-form input[type="text"]:focus{
    border-color: #00ad9e;
    outline: dashed red 2px;
    box-shadow: 0 0 5px rgba(0, 74, 173, 0.5);

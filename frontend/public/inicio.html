@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Solicitud de EPP</title>
+    <link rel="stylesheet" href="/frontend/src/styles/dashboard.css">
+</head>
+<body>
+
+<header class="header">
+        <img src="/frontend/src/assets/logo.png" alt="Agua de Puebla">
+    <nav>
+        <ul class="nav-links">
+            <li><a href="inicio.html"><strong>Inicio</strong></a></li>
+            <li><a href="nueva-solicitud.html">Nueva Solicitud</a></li>
+            <li><a href="historial.html">Historial</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="dashboard-container">
+
+    <section class="panels">
+        <article class="card" id="total-solicitudes">
+            <h2>Total Solicitudes</h2>
+            <p id="total-count">0</p>
+        </article>
+        <article class="card pending">
+            <h2>Pendientes</h2>
+            <p id="pending-count">0</p>
+        </article>
+        <article class="card approved">
+            <h2>Aprobadas</h2>
+            <p id="approved-count">0</p>
+        </article>
+        <article class="card rejected">
+            <h2>Rechazadas</h2>
+            <p id="rejected-count">0</p>
+        </article>
+    </section>
+
+    <section class="recent">
+        <h2>Últimas Solicitudes</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Trabajador</th>
+                    <th>EPP</th>
+                    <th>Cantidad</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody id="recent-table">
+                <!-- JS insertará las filas aquí -->
+            </tbody>
+        </table>
+    </section>
+
+</main>
+
+<script src="/frontend/src/js/dashboard.js"></script>
+</body>
+</html>
