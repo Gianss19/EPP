@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EPP_Backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bd71dc2f68fb071d0b4545833657ac93127b37ad")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f75bc40d2ab7bd72fa11354be5a1c37eaa8e809")]
 [assembly: System.Reflection.AssemblyProductAttribute("EPP_Backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EPP_Backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
