@@ -1,0 +1,30 @@
+# TO-DO Frontend (React)
+- [x] Configurar entorno de desarrollo con React (Vite o Create React App)
+- [x] Crear estructura de carpetas del proyecto React
+- [ ] Implementar sistema de autenticación de usuarios (JWT, OAuth, etc.)
+- [ ] Diseñar e implementar la interfaz de usuario principal con componentes React
+- [ ] Conectar frontend con el backend .NET (API REST)
+- [ ] Manejar estados de carga y errores con React (useState, useEffect, etc.)
+- [ ] Implementar validaciones de formularios (Formik, Yup, etc.)
+- [ ] Añadir pruebas unitarias y de integración (Jest, React Testing Library)
+- [ ] Optimizar rendimiento y accesibilidad (React.memo, Lighthouse)
+- [ ] Preparar para despliegue (build, configuración de hosting)
+
+# TO-DO Backend (.NET)
+
+- [x] Configurar entorno de desarrollo con .NET (ASP.NET Core)
+- [x] Definir estructura de carpetas del proyecto .NET
+- [x] Configurar base de datos (SQL Server, PostgreSQL, etc.) con Entity Framework Core
+- [ ] Implementar sistema de autenticación y autorización (Identity, JWT)
+- [x] Crear modelos y migraciones de base de datos con Entity Framework
+- [ ] Desarrollar endpoints de la API (CRUD) con ASP.NET Core
+- [ ] Implementar validaciones y manejo de errores (Data Annotations, Middleware)
+- [ ] Añadir pruebas unitarias y de integración (xUnit, MSTest)
+- [ ] Documentar la API (Swagger/OpenAPI)
+- [ ] Preparar para despliegue (Docker, configuración de servidor IIS/Azure)
+- [x] Configurar base de datos (SQL Server, PostgreSQL, etc.) con Entity Framework Core
+- [ ] Implementar sistema de autenticación y autorización (Identity, JWT)
+- [x] Crear modelos y migraciones de base de datos con Entity Framework
+- [ ] Desarrollar endpoints de la API (CRUD) con ASP.NET Core
+- [ ] Implementar validaciones y manejo de errores (Data Annotations, Middleware)
+- [ ] Añadir pruebas unitarias y de integración (xUnit, MSTest)
