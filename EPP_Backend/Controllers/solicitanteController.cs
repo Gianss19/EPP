@@ -1,15 +1,21 @@
     using Microsoft.AspNetCore.Mvc;
     using System.Collections.Generic;
-    using EPP_Backend.Models;
+using System.Runtime.CompilerServices;
 
-    namespace EPP_Backend.Controllers
+
+namespace EPP_Backend.Controllers
 {
     [ApiController]
     [Route("/solicitante")]
     public class SolicitanteController : ControllerBase
     {
         // Modelo simple para ejemplo
+        public class Solicitante
+        {
 
+            public int Id { get; set; }
+            public string Nombre {get; set; }
+    }
 
         // Simulación de datos en memoria
         private static List<Solicitante> solicitantes = new List<Solicitante>
@@ -36,7 +42,7 @@
             return Ok(solicitante);
         }
 
-        // POST: api/solicitante
+        // POST: /solicitante
         [HttpPost]
         public ActionResult<Solicitante> Create(Solicitante nuevo)
         {
