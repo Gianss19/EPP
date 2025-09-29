@@ -14,7 +14,7 @@ namespace EPP_Backend.Controllers
         {
 
             public int Id { get; set; }
-            public string Nombre {get; set; }
+            public string? Nombre {get; set; }
     }
 
         // Simulación de datos en memoria

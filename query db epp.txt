@@ -30,7 +30,8 @@ puesto VARCHAR(100) NOT NULL,
 id_gerencia INT NOT NULL,
 FOREIGN KEY(id_gerencia) REFERENCES gerencias(id_gerencia)
 );
-CREATE TABLE IF NOT EXISTS conceptos_epp(id_epp INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+CREATE TABLE IF NOT EXISTS conceptos_epp(
+id_epp INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
 concepto VARCHAR(100) NOT NULL,
 unidad_medida VARCHAR(20) NOT NULL,
 es_resguardo BOOLEAN NOT NULL

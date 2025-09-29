@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("024180c3-4255-4f40-b797-0529698a24ab")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("EPP_Backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f3102f12253bfe728a08ac74e27897fea7571eae")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+861d930504270ac3b192b8a57618a6fb9e796723")]
 [assembly: System.Reflection.AssemblyProductAttribute("EPP_Backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EPP_Backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
