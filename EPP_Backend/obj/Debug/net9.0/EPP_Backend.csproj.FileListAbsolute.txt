@@ -25,3 +25,4 @@ D:\gian\Documents\repos respaldo\EPP\EPP_Backend\obj\Debug\net9.0\refint\EPP_Bac
 D:\gian\Documents\repos respaldo\EPP\EPP_Backend\obj\Debug\net9.0\EPP_Backend.pdb
 D:\gian\Documents\repos respaldo\EPP\EPP_Backend\obj\Debug\net9.0\EPP_Backend.genruntimeconfig.cache
 D:\gian\Documents\repos respaldo\EPP\EPP_Backend\obj\Debug\net9.0\ref\EPP_Backend.dll
+D:\gian\Documents\repos respaldo\EPP\EPP_Backend\obj\Debug\net9.0\EPP_Backend.sourcelink.json
