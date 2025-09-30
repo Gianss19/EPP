@@ -1,2 +1,5 @@
-console.log(" APP JS FILE ");
-import React from 'react';
+function añadirHistorial() {
+    window.location.href = "/historial.html";
+    console.log("Navegando a historial");
+
+}
