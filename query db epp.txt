@@ -80,8 +80,12 @@ FOREIGN KEY (id_epp) REFERENCES conceptos_epp(id_epp)
 );
 /*
 ============================================
-TO-DO / Lista de pendientes para la BDD\n============================================\n\n1. Validaciones de datos:
-   - Verificar que las contraseñas se guarden como hash y se genere un salt único.\n   - Asegurar que el correo de usuario sea único.
+TO-DO / Lista de pendientes para la BDD
+============================================
+
+1. Validaciones de datos:
+   - Verificar que las contraseñas se guarden como hash y se genere un salt único.
+   - Asegurar que el correo de usuario sea único.
    - Validar que cantidad de items_solicitud sea siempre > 0.
    - Validar que stock no quede negativo al surtir items.
 

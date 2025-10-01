@@ -22,9 +22,4 @@
 - [ ] Añadir pruebas unitarias y de integración (xUnit, MSTest)
 - [ ] Documentar la API (Swagger/OpenAPI)
 - [ ] Preparar para despliegue (Docker, configuración de servidor IIS/Azure)
-- [x] Configurar base de datos (SQL Server, PostgreSQL, etc.) con Entity Framework Core
-- [ ] Implementar sistema de autenticación y autorización (Identity, JWT)
-- [x] Crear modelos y migraciones de base de datos con Entity Framework
-- [ ] Desarrollar endpoints de la API (CRUD) con ASP.NET Core
-- [ ] Implementar validaciones y manejo de errores (Data Annotations, Middleware)
-- [ ] Añadir pruebas unitarias y de integración (xUnit, MSTest)
+
