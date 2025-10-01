@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 document.addEventListener('DOMContentLoaded', function () {
     const app = document.getElementById('app');
 
@@ -54,3 +55,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+=======
+function añadirHistorial() {
+    window.location.href = "/historial.html";
+    console.log("Navegando a historial");
+
+}
+>>>>>>> 091e73ea73838d14205b383e0bfe081e159ea843
