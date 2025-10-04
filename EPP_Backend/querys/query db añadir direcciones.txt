@@ -1,0 +1,10 @@
+USE epp;
+INSERT INTO direcciones (direccion) VALUES
+('Dirección de Administración y Finanzas'),
+('Dirección de Operación de Distribución'),
+('Dirección de Operación de Producción y Obras'),
+('Dirección de Drenaje y Saneamiento'),
+('Dirección Comercial'),
+('Dirección de Transformación Digital'),
+('Dirección de Planeación'),
+('Dirección General');

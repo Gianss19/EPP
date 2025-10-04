@@ -30,7 +30,7 @@ builder.Services.AddCors(options =>
     // 🔹 Opción 2: Solo tu frontend (recomendado)
    options.AddPolicy("FrontendOnly", policy =>
        {
-           policy.WithOrigins("http://127.0.0.1:3000", "http://localhost:5000") // solo tu frontend
+           policy.WithOrigins("http://127.0.0.1:3000", "http://localhost:5208") // solo tu frontend
                  .AllowAnyMethod()   // permite GET, POST, PUT, DELETE
                  .AllowAnyHeader();  // permite cabeceras como Content-Type
        });

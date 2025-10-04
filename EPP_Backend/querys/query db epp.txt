@@ -1,0 +1,132 @@
+SHOW DATABASES;
+CREATE DATABASE if not EXISTS EPP;
+USE EPP;
+CREATE TABLE IF NOT EXISTS usuarios(id_usuario INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+nombre VARCHAR(50) NOT NULL,
+correo VARCHAR(50) UNIQUE NOT NULL,
+pass CHAR(60) NOT NULL,
+salt Char(16) NOT NULL, 
+fecha_creacion DATETIME DEFAULT NOW(),
+ultimo_cambio DATETIME,
+intentos_fallidos INT NOT NULL DEFAULT 0,
+rol VARCHAR(20) NOT NULL,
+activo BOOLEAN NOT NULL DEFAULT FALSE
+);
+
+CREATE TABLE IF NOT EXISTS direcciones(
+id_direccion INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+direccion VARCHAR(100) NOT NULL
+);
+CREATE TABLE IF NOT EXISTS gerencias(
+id_gerencia INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+gerencia VARCHAR(100) NOT NULL,
+id_direccion INT NOT NULL,
+centro_costos INT NOT NULL,
+FOREIGN KEY(id_direccion) REFERENCES direcciones(id_direccion)
+);
+CREATE TABLE IF NOT EXISTS puestos (
+id_puesto INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+puesto VARCHAR(100) NOT NULL,
+id_gerencia INT NOT NULL,
+FOREIGN KEY(id_gerencia) REFERENCES gerencias(id_gerencia)
+);
+CREATE TABLE IF NOT EXISTS conceptos_epp(id_epp INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+concepto VARCHAR(100) NOT NULL,
+unidad_medida VARCHAR(20) NOT NULL,
+es_resguardo BOOLEAN NOT NULL
+
+);
+
+CREATE TABLE IF NOT EXISTS stock(
+id_epp INT NOT NULL PRIMARY KEY,
+cantidad INT NOT NULL DEFAULT 0,
+FOREIGN KEY (id_epp) REFERENCES conceptos_epp(id_epp)
+);
+CREATE TABLE IF NOT EXISTS empleados(
+num_empleado INT NOT NULL PRIMARY KEY,
+nombre VARCHAR(50) NOT NULL,
+id_puesto INT NOT NULL,
+FOREIGN KEY(id_puesto) REFERENCES puestos(id_puesto)
+);
+
+CREATE TABLE IF NOT EXISTS solicitudes(
+
+id_solicitud INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+id_solicitante INT NOT NULL,          -- quien genera la solicitud
+fecha_solicitud DATETIME NOT NULL DEFAULT NOW(),
+justificacion VARCHAR(200) NOT NULL,
+status VARCHAR(20),
+FOREIGN KEY (id_solicitante) REFERENCES usuarios(id_usuario)
+);
+
+CREATE TABLE IF NOT EXISTS solicitud_empleado (
+id_solicitud_empleado INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+id_solicitud INT NOT NULL,
+num_empleado INT NOT NULL,
+rol VARCHAR(50),                       -- opcional: rol o comentario
+FOREIGN KEY (id_solicitud) REFERENCES solicitudes(id_solicitud),
+FOREIGN KEY (num_empleado) REFERENCES empleados(num_empleado)
+);
+CREATE TABLE IF NOT EXISTS items_solicitud (
+id_item INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+id_solicitud_empleado INT NOT NULL,    -- FK hacia tabla intermedia
+id_epp INT NOT NULL,                   -- FK hacia ConceptoEPP
+cantidad INT NOT NULL,
+talla INT,
+surtido BOOLEAN DEFAULT FALSE,
+FOREIGN KEY (id_solicitud_empleado) REFERENCES solicitud_empleado(id_solicitud_empleado),
+FOREIGN KEY (id_epp) REFERENCES conceptos_epp(id_epp)
+);
+/*
+============================================
+TO-DO / Lista de pendientes para la BDD\n============================================\n\n1. Validaciones de datos:
+   - Verificar que las contraseñas se guarden como hash y se genere un salt único.\n   - Asegurar que el correo de usuario sea único.
+   - Validar que cantidad de items_solicitud sea siempre > 0.
+   - Validar que stock no quede negativo al surtir items.
+
+2. Índices adicionales:
+   - idx_solicitante: para búsquedas rápidas de solicitudes por usuario.
+   - idx_solicitud_empleado: para listar empleados por solicitud.
+   - idx_items_solicitud: para listar items por solicitud_empleado.
+   - idx_stock_epp: para consultas rápidas de stock por id_epp.
+
+3. Triggers a implementar:
+   - Disminuir stock automáticamente al marcar surtido = TRUE.
+   - Opcional: registrar histórico de cambios de stock.
+   - Opcional: actualizar fecha_ultimo_cambio al modificar pass de usuarios.
+
+4. Constraints opcionales:
+   - CHECK en items_solicitud (cantidad > 0)
+   - CHECK en usuarios (activo IN (0,1))
+   - Limitar tallas a valores válidos según tipo de EPP.
+
+5. Datos iniciales a insertar:
+   - Direcciones y gerencias base.
+   - Puestos y empleados de prueba.
+   - Conceptos de EPP con stock inicial.
+   - Usuarios de prueba (admin y solicitantes).
+
+6. Seguridad:
+   - Revisar roles y permisos de cada usuario.
+   - Controlar intentos fallidos de login.
+   - Definir políticas de cambio de contraseña.
+
+7. Optimización futura:
+   - Revisar queries más frecuentes y agregar índices según necesidad.
+   - Considerar particionamiento de tablas muy grandes si crece el histórico.
+   - Documentar triggers y procedimientos almacenados.
+
+8. Documentación:
+   - Diagramas ER de todas las tablas y relaciones.
+   - Descripción de cada campo y FK.
+   - Casos de uso de las tablas (quién crea qué, quién recibe qué).
+
+9. Migración y backups:
+   - Estrategia de backup regular.
+   - Plan de restauración en caso de fallo.
+   - Considerar scripts para creación automática de la base.
+
+============================================
+FIN DEL TO-DO
+============================================
+*/

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EPP_Backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c371494cdd38164a1acf31b81c5c3cb89da9887c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3cba1017704ad2e4e8f22760959aab49f841fffb")]
 [assembly: System.Reflection.AssemblyProductAttribute("EPP_Backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EPP_Backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

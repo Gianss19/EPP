@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+// frontend/src/App.js
 document.addEventListener('DOMContentLoaded', function () {
     const app = document.getElementById('app');
 
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Función para hacer fetch
     function buscarConcepto(id) {
-        fetch(`http://localhost:5000/conceptosEpp/${id}`)
+        fetch(`http://localhost:5208/conceptosEpp/${id}`)
             .then(response => {
                 if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                 return response.json();
@@ -55,10 +55,3 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
-=======
-function añadirHistorial() {
-    window.location.href = "/historial.html";
-    console.log("Navegando a historial");
-
-}
->>>>>>> 091e73ea73838d14205b383e0bfe081e159ea843
